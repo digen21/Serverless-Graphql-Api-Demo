@@ -10,7 +10,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => "Hi! Love from @stemmlerjs 🤠.",
+    hello: () => "Hi! Love from @Hello World 🤠.",
   },
 };
 
