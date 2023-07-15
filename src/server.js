@@ -10,7 +10,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => "Hi! Love from @khalilstemmler 🤠.",
+    hello: () => "Hi! Love from @stemmlerjs 🤠.",
   },
 };
 
@@ -31,4 +31,5 @@ function createLocalServer() {
     playground: true,
   });
 }
+
 module.exports = { createLambdaServer, createLocalServer };
