@@ -1,2 +1,6 @@
 # Serverless-Graphql-Api-Demo
-https://img.shields.io/badge/graphql_api-apollo_express-server
+<div id="badges" align="center">
+  <a herf="https://server-less-graphql-playground.netlify.app/">
+   <img src="https://img.shields.io/badge/Graphql-blue?logo=graphql&logoColor=pink" />
+  </a>
+</div>
