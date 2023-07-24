@@ -1,34 +1,24 @@
 const ApolloServer = require("apollo-server").ApolloServer;
 const ApolloServerLambda = require("apollo-server-lambda").ApolloServer;
-const { gql } = require("apollo-server-lambda");
-
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-const resolvers = {
-  Query: {
-    hello: () => "Hi! Love from @Hello World 🤠.",
-  },
-};
+const schema = require("./graphql/schema");
 
 function createLambdaServer() {
   return new ApolloServerLambda({
-    typeDefs,
-    resolvers,
+    schema,
     introspection: true,
     playground: true,
+    context: ({ req }) => console.log("", req),
   });
 }
 
 function createLocalServer() {
   return new ApolloServer({
-    typeDefs,
-    resolvers,
+    schema,
     introspection: true,
     playground: true,
+    context: ({ req }) => ({
+      user: req,
+    }),
   });
 }
 
